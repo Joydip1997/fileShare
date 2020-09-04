@@ -14,7 +14,7 @@ app.use("/files", require("./Routes/downloadfile"));
 app.use("/files/download", require("./Routes/download"))
 
 app.get("/", (req, res) => {
-    return res.render('download.ejs', { uuid: "sasa", fileName: "sasa", fileSize: "sasa", downloadLink: "sasa" });
+    return res.render('upload.ejs');
 })
 
 
