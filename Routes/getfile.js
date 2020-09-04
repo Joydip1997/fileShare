@@ -20,6 +20,10 @@ let upload = multer({
 }).single("myfile");
 
 
+router.get("/", (req, res) => {
+    return res.render('download.ejs', { uuid: "sasa", fileName: "sasa", fileSize: "sasa", downloadLink: "sasa" });
+})
+
 router.post("/", (req, res) => {
     upload(req, res, async(err) => {
         if (err) {
