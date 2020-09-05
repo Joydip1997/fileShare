@@ -12,7 +12,7 @@ Router.get("/:uuid", async(req, res) => {
             return res.status(500)
         }
 
-        return res.render('download.ejs', { uuid: file.uuid, fileName: file.filename, fileSize: file.size, downloadLink: `${process.env.APP_BASE_URL}/file/download/${file.uuid}` });
+        return res.render('download.ejs', { uuid: file.uuid, fileName: file.filename, fileSize: file.size, downloadLink: `${process.env.APP_BASE_URL}/files/download/${file.uuid}` });
 
     } catch (error) {
 
