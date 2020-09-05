@@ -34,7 +34,7 @@ router.post("/", (req, res) => {
             path: req.file.path
         })
         const response = await file.save()
-        return res.json({ file: `${process.env.APP_BASE_URL}/files/${response.uuid}` })
+        return res.json({ file: `${process.env.APP_BASE_URL}/file/${response.uuid}` })
     })
 })
 
