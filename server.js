@@ -10,9 +10,6 @@ const db = require('./config/db');
 db();
 
 
-app.get("/", (req, res) => {
-    res.render("upload.ejs")
-})
 
 
 app.use("/api/file", require("./Routes/getfile"));
